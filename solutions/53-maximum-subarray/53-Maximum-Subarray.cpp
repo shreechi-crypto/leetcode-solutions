@@ -1,0 +1,17 @@
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        int CS =0, MS = INT_MIN ;
+
+        for ( auto val : nums){
+            CS+=val;
+            MS=max(CS,MS);
+            if (CS<0){
+                CS=0;
+            }
+
+        }
+        return MS;
+        
+    }
+};
